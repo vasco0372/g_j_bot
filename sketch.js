@@ -46,12 +46,12 @@ function get_joke_of_the_day() {
           var txt = 'junk';
           var xmlhttp = new XMLHttpRequest();
           xmlhttp.onreadystatechange = function(){
-          if(xmlhttp.status == 200 /*&& xmlhttp.readyState == 4)*/{
+          if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
             txt = xmlhttp.responseText;
           }
         };
         xmlhttp.open("GET","https://github.com/vasco0372/g_j_bot",true);
-        xhttp.setRequestHeader("Content-type", "application/json");
+        xmlhttp.setRequestHeader("Content-type", "application/json");
         xmlhttp.send(); 
         var joketxt = JSON.parse();
         alert(joketxt);
