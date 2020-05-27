@@ -46,7 +46,7 @@ function get_joke_of_the_day() {
           var txt = 'junk';
           var xmlhttp = new XMLHttpRequest();
           xmlhttp.onreadystatechange = function(){
-          if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+          if(xmlhttp.status == 200 /*&& xmlhttp.readyState == 4)*/{
             txt = xmlhttp.responseText;
           }
         };
