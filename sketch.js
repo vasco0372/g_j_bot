@@ -20,6 +20,8 @@ function get_joke_of_the_day() {
           createP(data.contents.jokes[0].text);
           } else{
             alert("Please try again!");
+            var mydata = JSON. parse(jokes.json); 
+            alert(mydata);
         }
 
       }
