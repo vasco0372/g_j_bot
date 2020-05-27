@@ -1,4 +1,4 @@
-[
+var jokes=[
   {
     "text": "q. How do you comfort a JavaScript bug? a. You console it.",
     "question": "How do you comfort a JavaScript bug?",
@@ -236,4 +236,4 @@
     "tags": ["javascript", "css"],
     "rating": 1
   }
-]
+];
