@@ -50,7 +50,7 @@ function get_joke_of_the_day() {
             txt = xmlhttp.responseText;
           }
         };
-        xmlhttp.open("GET","https://github.com/vasco0372/Bootstrap-portfolio/index.html",true);
+        xmlhttp.open("GET","index.html",true);
         xmlhttp.send(); 
         alert(xmlhttp);
 //local file read
