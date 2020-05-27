@@ -50,9 +50,11 @@ function get_joke_of_the_day() {
             txt = xmlhttp.responseText;
           }
         };
-        xmlhttp.open("GET","https://github.com/vasco0372/g_j_bot/index.html",true);
+        xmlhttp.open("GET","https://github.com/vasco0372/g_j_bot",true);
+        xhttp.setRequestHeader("Content-type", "application/json");
         xmlhttp.send(); 
-        alert(xmlhttp);
+        var joketxt = JSON.parse();
+        alert(joketxt);
 //local file read
        }
        
