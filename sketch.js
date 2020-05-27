@@ -53,7 +53,7 @@ function get_joke_of_the_day() {
         xmlhttp.open("GET","https://github.com/vasco0372/g_j_bot",true);
         xmlhttp.setRequestHeader("Content-type", "application/json");
         xmlhttp.send(); 
-        var joketxt = JSON.parse();
+        var joketxt = JSON.parse(txt);
         alert(joketxt);
 //local file read
        }
