@@ -243,7 +243,7 @@ var jokes=[
 var mycanvas;
 var question;
 function setup() {
-  createCanvas(windowWidth/2, 378);
+  createCanvas(584, 378);
   mycanvas=document.getElementById("defaultCanvas0");
   mysec=document.getElementById("aboutMe");
   mysec.appendChild(mycanvas);

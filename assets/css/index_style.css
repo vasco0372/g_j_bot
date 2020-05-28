@@ -90,6 +90,7 @@ h2 {
 	padding-bottom: 60px;
 	padding-left:10px;
 	padding-right:10px;
+	font-size: 20px;
 }
 #connect{
 	width: 200px;
@@ -111,6 +112,13 @@ h2 {
 	text-align: center;
 	border-top:10px solid #4aaaa5;
 	margin-left: 60px;
+}
+
+#tellJoke{
+	font-size: 20px;
+}
+#question, #answer{
+	font-size: 20px;
 }
 /*classes and ids for fonts and coloring*/
 
@@ -242,7 +250,4 @@ h3{
 		width:33%;
 		margin-left:15%;
 	}
-	#defaultCanvas0{
-		left:0;
-	}
-}
+
