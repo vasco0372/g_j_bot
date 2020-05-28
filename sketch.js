@@ -1,3 +1,4 @@
+//
 var jokes=[
   {
     "text": "q. How do you comfort a JavaScript bug? a. You console it.",
@@ -239,15 +240,22 @@ var jokes=[
     "rating": 1
   }
 ];
-
+var mycanvas;
+var question;
 function setup() {
-  createCanvas(400, 378);
+  createCanvas(windowWidth/2, 378);
+  mycanvas=document.getElementById("defaultCanvas0");
+  mysec=document.getElementById("aboutMe");
+  mysec.appendChild(mycanvas);
+  document.getElementById("tellJoke").addEventListener('click',get_joke)
   function get_joke (){
     var joke_number=floor(random(1,26));
     var joke_question=jokes[joke_number].question;
     var joke_answer=jokes[joke_number].answer;
     console.log ("Question; "+joke_question);
     console.log ("Answer: "+joke_answer);
+    document.getElementById("question").innerHTML=joke_question;
+    document.getElementById("answer").innerHTML=joke_answer;
     }
 get_joke();
 }
@@ -260,15 +268,17 @@ function draw() {
   rect(200,132,20,16);//neck
   fill(255,100,100);
   ellipse(200,105,46,55);//face
+  ellipse(160,240,15,20);//palm
+  ellipse(240,240,15,20);
   fill(255,0,0);
+
   rect(200,190,70,100,10);//body
   ellipse(200,190,5,5); //button
   ellipse(200,170,5,5); //button
   ellipse(200,150,5,5); //button
   rect(160,165,16,45,5);//right hand
   rect(240,165,16,45,5);
-  ellipse(160,240,15,20);
-  ellipse(240,240,15,20);
+  
   rect(160,210,16,45,5);//left hand
   rect(240,211,16,45,5);
   fill(10);
@@ -284,11 +294,12 @@ function draw() {
   line(204, 95, 216, 95);//right eyebrow
   line(200,105,200,113);
   fill(10);
-  rect(200,80,60,8);//hat brim
-  rect(200,74,40,14);//hat brim
+  rect(200,80,60,10);//hat brim
+  rect(200,74,40,14);//hat 
   fill(255,0,0);
   rect(180,340,28,12,5);//left shoe
   rect(220,340,28,12,5);//right shoe
   fill(50,55,100);
-  rect(200,362,400,32,0);//right leg
+  rect(200,362,width,32,0);//right leg
 }
+//var h1msg = createElement('h1', "My favorite number is 21");
