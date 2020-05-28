@@ -292,4 +292,3 @@ function draw() {
   fill(50,55,100);
   rect(200,362,400,32,0);//right leg
 }
-//
