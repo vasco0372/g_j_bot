@@ -252,7 +252,8 @@ function setup() {
 get_joke();
 }
 
-function draw() {extraCanvas.clear();
+function draw() {
+  //extraCanvas.clear();
  background(220);
   fill(255,0,0);
   rectMode(CENTER);
