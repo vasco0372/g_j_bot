@@ -241,7 +241,7 @@ var jokes=[
 ];
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(400, 378);
   function get_joke (){
     var joke_number=floor(random(1,26));
     var joke_question=jokes[joke_number].question;
@@ -252,10 +252,43 @@ function setup() {
 get_joke();
 }
 
-function draw() {
-  background(200);
+function draw() {extraCanvas.clear();
+ background(220);
   fill(255,0,0);
-  ellipse(200,100,25,35);
-  rect(100,300,200,80,20);
+  rectMode(CENTER);
+  rect(200,132,20,16);//neck
+  fill(255,100,100);
+  ellipse(200,105,46,55);//face
+  fill(255,0,0);
+  rect(200,190,70,100,10);//body
+  ellipse(200,190,5,5); //button
+  ellipse(200,170,5,5); //button
+  ellipse(200,150,5,5); //button
+  rect(160,165,16,45,5);//right hand
+  rect(240,165,16,45,5);
+  ellipse(160,240,15,20);
+  ellipse(240,240,15,20);
+  rect(160,210,16,45,5);//left hand
+  rect(240,211,16,45,5);
+  fill(10);
+  rect(200,230,65,40,5);//pants
+  rect(180,290,22,100,5);//left leg
+  rect(220,290,22,100,5);//right leg
+  line(200,140,200,240);//stripe
+  fill(200,0,0);
+  arc(200, 115, 20, 15, 0, PI);//smile
+  ellipse(210, 100, 10, 5);//right eye
+  ellipse(190, 100, 10, 5);//left eye
+  line(184, 95, 196, 95);//left eyebrow
+  line(204, 95, 216, 95);//right eyebrow
+  line(200,105,200,113);
+  fill(10);
+  rect(200,80,60,8);//hat brim
+  rect(200,74,40,14);//hat brim
+  fill(255,0,0);
+  rect(180,340,28,12,5);//left shoe
+  rect(220,340,28,12,5);//right shoe
+  fill(50,55,100);
+  rect(200,362,400,32,0);//right leg
 }
 //
