@@ -1,2 +1,2 @@
-# Responsive-Portfolio
-HomeWork 2 - Responsive Portfolio
+# G_J_BOT
+gjbot
