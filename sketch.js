@@ -278,7 +278,7 @@ function get_quote_of_the_day() {
        document.getElementById("quote").innerHTML=myQuote;
       }
     };
-    xhttp.open("GET", "https://quotes.rest/quote/search.json?category=inspire", true);
+    xhttp.open("GET", "https://quotes.rest/quote/random.json", true);
     //xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.setRequestHeader("X-Theysaidso-Api-Secret", "_9O9NdNSC7uf3DAXp_7mXQeF");
     xhttp.send();
