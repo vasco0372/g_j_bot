@@ -244,7 +244,7 @@ var mycanvas;
 var question;
 var data;
 function setup() {
-  createCanvas(windowWidth/2, 378);
+  createCanvas(windowWidth/2.5, 378);
   mycanvas=document.getElementById("defaultCanvas0");
   mysec=document.getElementById("aboutMe");
   mysec.appendChild(mycanvas);
