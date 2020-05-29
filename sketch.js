@@ -242,12 +242,14 @@ var jokes=[
 ];
 var mycanvas;
 var question;
+var data;
 function setup() {
   createCanvas(windowWidth/2, 378);
   mycanvas=document.getElementById("defaultCanvas0");
   mysec=document.getElementById("aboutMe");
   mysec.appendChild(mycanvas);
-  document.getElementById("tellJoke").addEventListener('click',get_joke)
+  document.getElementById("tellJoke").addEventListener('click', get_joke);
+  document.getElementById("getQuote").addEventListener('click', get_quote_of_the_day)
   function get_joke (){
     var joke_number=floor(random(1,26));
     var joke_question=jokes[joke_number].question;
@@ -257,7 +259,34 @@ function setup() {
     document.getElementById("question").innerHTML=joke_question;
     document.getElementById("answer").innerHTML=joke_answer;
     }
-get_joke();
+//get_joke();
+//
+function get_quote_of_the_day() {
+  document.getElementById("author").innerHTML="Retriving Quote!";
+  document.getElementById("quote").innerHTML="Please wait!";
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       // Access the result here
+       console.log(this);
+       console.log(this.responseText);
+       var data = JSON.parse(this.responseText);
+       console.log(data);
+       var myAuthor="Author: "+ data.contents.quotes[0].author;
+       var myQuote = "Quote: " + data.contents.quotes[0].quote;
+       document.getElementById("author").innerHTML=myAuthor;
+       document.getElementById("quote").innerHTML=myQuote;
+      }
+    };
+    xhttp.open("GET", "https://quotes.rest/quote/search.json?category=inspire", true);
+    //xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.setRequestHeader("X-Theysaidso-Api-Secret", "_9O9NdNSC7uf3DAXp_7mXQeF");
+    xhttp.send();
+  }
+
+// Convert data string to an object
+
+//get_quote_of_the_day()
 }
   var x=0;
   var speed=1;

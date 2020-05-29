@@ -87,10 +87,11 @@ h2 {
 }
 #myInfo{
 	width:96%;
-	padding-bottom: 60px;
+	padding-bottom: 20px;
 	padding-left:10px;
 	padding-right:10px;
 	font-size: 20px;
+	color: rgb(0,0,200);
 }
 #connect{
 	width: 200px;
@@ -114,10 +115,11 @@ h2 {
 	margin-left: 60px;
 }
 
-#tellJoke{
+#tellJoke, #getQuote{
 	font-size: 20px;
+	color: blue;
 }
-#question, #answer{
+#question, #answer,#author,#quote{
 	font-size: 20px;
 }
 /*classes and ids for fonts and coloring*/
