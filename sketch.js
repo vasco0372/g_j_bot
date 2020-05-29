@@ -243,7 +243,7 @@ var jokes=[
 var mycanvas;
 var question;
 function setup() {
-  createCanvas(584, 378);
+  createCanvas(windowWidth/2, 378);
   mycanvas=document.getElementById("defaultCanvas0");
   mysec=document.getElementById("aboutMe");
   mysec.appendChild(mycanvas);
@@ -259,10 +259,18 @@ function setup() {
     }
 get_joke();
 }
-
+  var x=0;
+  var speed=1;
 function draw() {
   //extraCanvas.clear();
  background(220);
+ //bouncing ball
+ if (x<0 || x>width){
+  speed=speed*-1;
+ }
+ ellipse (x,200,50,50);
+  x=x+speed;
+
   fill(255,0,0);
   rectMode(CENTER);
   rect(200,132,20,16);//neck
